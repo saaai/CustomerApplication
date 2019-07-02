@@ -97,4 +97,18 @@ Component:
 
 - Components is the binding layer between UI and Model.
     - Inside app.component.ts, created variable named as title and it is assigned to Customer Application. We can consume this title on the UI using Expressions {{  }}.
-    - Expressions help you to display values and properties of a Component on the UI.
+    - Expressions help you to display values and properties of a Component on the UI. 
+    - The good part about "Expressions" is it can be mixed nicely, with HTML. That's why lot of people also termed this as "Interpolation".
+    
+    - What is the thing that connects the app.component.html to app.component.ts? that the code behind / binding code of this app.component.html
+        - So, that is done by something called as "Decorator". This Decorator defines what the app.component.ts can do / how it should works.
+            ex: @Component({ //In this Decorator there are 3 properties selector, templateUrl, styleurls
+                  
+                  selector: 'app-root',
+                  templateUrl: './app/app.component.html', --------------> this tells that this AppComponent is tied up with this HTML / UI.
+                  styleurls: ['./app/component.css'] ------------> tells us that this AppComponent is binded up with this css.
+            })
+
+- @Component is the Decorator of the class "AppComponent".Decorator
+- @Component comes from the angular core.Component
+- 
