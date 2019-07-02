@@ -56,3 +56,14 @@ Folder Structure of CLI Project Angular 6 :
     - what if i want to compile and create a dist folder for that we have proper command which is "ng build".
     - this "ng build" command will compile whatever that is there in the src folder and create the output in the dist folder and we can take this dist folder to production.
 
+What is angular? what is the need of angular? architecture of angular? what goes inside the src folder?
+- Angular is a binding framework. 
+- It helps us bind the View and the Model. 
+    - View (html) -----> Binding Code -------> Model (JavaScript Object)
+- As a developer we have to write a lot of code which sends the data from the UI to model and from model to the UI.
+- The code which binds the UI and model is very complex. In other words if the UI is having a tree view control tables right and JavaScript Object is also very complex then this binding code becomes complex and complex.
+- So, angular says that dont worry about binding code I will handle it.
+- If you look at angular.js website, they clearly says that (Model View whatever).
+- Angular is a binding framework which binds the View and the Model.
+- Ths binding code whatever you think about will be handled very easily by angular, sending the key events and raising the events back from the Object.
+
