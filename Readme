@@ -27,4 +27,32 @@ Folder Structure of CLI Project Angular 6 :
     Errors can be programmatic error or it can be stylistic errors. So, these checks are done during the coding phase itself.
     ex: if i write something in the code file during the coding phase itself it will say there is some error.
      
+- Package.json 
+    - Let's start looking at package.json, this is for node.
+    - In package.json we can list down all our dependencies, and when we say "npm install"  it will install all the frameworks which are defined in the package.json
+    - package.json has dependencies defined.
+    - we can see something called as : dev dependencies
+        - this dev dependencies are things which will not goto production.
+        - these are used only during the development phase.
+    - this package.json is having all the angular dependencies, becos of this only angular has been installed.
+
+- tsconfig.json 
+    - this file is for Typescript, to say the target folder after the ts is converted to js. 
+    - how the compilation of the ts should take place.
+
+- angular.json  
+    - for angular purpose, the way angular has organised the project is as follows.
+    - at the top we have app, inside the app we have the source code.
+    - source root, says where is the src code in the project folder.
+    - architect, says which kind of builders will run for which command.
+
+- we will have a tsconfig.json file in the main folder of the project. 
+    - in the app itself, we can have a tsconfig.json file.
+    - tsconfig.app.json will take a lot of tsconfig.json file and also adds lots of spl of its.
+    - we can have tsconfig.json file on the app and also we can tsconfig.app.json file for every project, so we can override it.
+    - so, thats why we can see in the main root folder. we are having tsconfig.app.json and also tsconfig.json on the root.
+
+- Now, when we ran "ng serve" it compiled in-memory. the angular application compiled in-memory and it ran the application.
+    - what if i want to compile and create a dist folder for that we have proper command which is "ng build".
+    - this "ng build" command will compile whatever that is there in the src folder and create the output in the dist folder and we can take this dist folder to production.
 
