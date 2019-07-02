@@ -102,13 +102,26 @@ Component:
     
     - What is the thing that connects the app.component.html to app.component.ts? that the code behind / binding code of this app.component.html
         - So, that is done by something called as "Decorator". This Decorator defines what the app.component.ts can do / how it should works.
-            ex: @Component({ //In this Decorator there are 3 properties selector, templateUrl, styleurls
+            
+            ex: the below code is called decorator.
+            
+            @Component({ //In this Decorator there are 3 properties selector, templateUrl, styleurls
                   
                   selector: 'app-root',
-                  templateUrl: './app/app.component.html', --------------> this tells that this AppComponent is tied up with this HTML / UI.
+                  templateUrl: './app/app.component.html', --------------> this tells that this AppComponent is tied/binded up with this HTML / UI. This templateUrl is the person which binds the Component and an HTML.
                   styleurls: ['./app/component.css'] ------------> tells us that this AppComponent is binded up with this css.
             })
 
 - @Component is the Decorator of the class "AppComponent".Decorator
-- @Component comes from the angular core.Component
+- @Component comes from the angular core. angular core is nothing but the core framework of angular.
+    ex: import { component } from '@angular/core';
+- In our package.json file we said that we had installed dependencies, one of the dependencies where we can get "component" is from the '@angular/core'.
+    import { component } from '@angular/core'; ----> this code here says, from @angular/core that means from node_modules folder ---> angular folder ---> core folder ---> import component.
+
+- This Component is nothing but the 'decorator'.
+- If the import { component } is not there then the decorator part will show error.
+
+Module:
+- In our architecture we have said that we have an UI, Model, the UI and the Model is binded by a component. at this moment we dont have Model, later we will have Model.
+- We have the View, Model, Component, and group of Components are clubed or grouped into something called as Modules.
 - 
