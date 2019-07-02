@@ -12,3 +12,19 @@ Folder Structure of CLI Project Angular 6 :
     
 - Src
     - Inside src folder we have something called app, where we will write all our source code.
+
+- If you see the angular applications, it has 3 big technologies that work together.
+    - Angular framework.
+    - Type script which helps us to tranform into JS.
+    - Node which is our packages manager.
+        - So, for each one of these technologies it needs configuration files.
+        - These JSON files which we see out in the project folder, Angular.json, package.json, tsconfig.json. these are all 3 configuration files for all these 3 technologies.
+        - Angular - angular.json
+        - Node - package.json
+        - Typescript - tsconfig.json
+
+- tslint.json file is used during the linting process, this process is used to check the source code for any errors. 
+    Errors can be programmatic error or it can be stylistic errors. So, these checks are done during the coding phase itself.
+    ex: if i write something in the code file during the coding phase itself it will say there is some error.
+     
+
