@@ -67,3 +67,34 @@ What is angular? what is the need of angular? architecture of angular? what goes
 - Angular is a binding framework which binds the View and the Model.
 - Ths binding code whatever you think about will be handled very easily by angular, sending the key events and raising the events back from the Object.
 
+- How does Angular CLI organizes our project?
+    - src folder at the top. src folder signifies the project. 
+    - Inside the project src we can have "app" folder. this app can be erp application, hospital management application, inventory application.
+    - Inside the project src we can have "multiple" app folders.
+        - app, app1, app2, app3, app4.........
+    - Inside "app" folder we have "component" and "module". 
+
+Component:
+- We said we have HTML UI and JavaScript Model and angular said that it will take care of the binding between UI and Model.
+- Binding Code in the Angular is which binds the Model and UI is termed as "Component".
+- This Component is that part of angular which actually recieves data from the UI / the events from the UI and sends data to the UI.
+- So, you can think about we have View, we have Model, the binding code what is there in between you can term that as "Component".
+- Normally, in an application you can have lot of view and lot of Components and lot of Models.
+    - So, a group of Components is termed as Modules.
+        ex: Module called as Accounting. In Accounting Module we can have below two Components:
+                ----> Journal Component 
+                ----> Voucher Component
+
+        ex: Module called as Hospital Management System. In that we can have Components like :
+                -----> Patients
+                -----> Doctor's 
+                |
+                |
+- So, at the top we have something called as Modules, the Modules group the Components.
+- The "Component" bind the UI and the Model.
+- So, the Component has the binding code of the UI and the Model.
+- Component is the Heart of Angular.
+
+- Components is the binding layer between UI and Model.
+    - Inside app.component.ts, created variable named as title and it is assigned to Customer Application. We can consume this title on the UI using Expressions {{  }}.
+    - Expressions help you to display values and properties of a Component on the UI.
