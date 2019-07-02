@@ -1,0 +1,14 @@
+Folder Structure of CLI Project Angular 6 :
+- Dist 
+    - Dist folder is where the final compiled Java Script source code is. 
+    - when the Project is compiled all the TS files are converted to JS.
+    - The final output which we will take to production is all there in the dist folder.
+
+- node_modules
+    - whatever npm install we do, all those packages will get copied in this node_modules folder.
+
+- e2e
+    - end to end testing, this is where we will write our white box test. These white box tests will be fired on the source code.
+    
+- Src
+    - Inside src folder we have something called app, where we will write all our source code.
