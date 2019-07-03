@@ -187,6 +187,32 @@ Import and Export :
 - This selector says that, load the templateUrl html specified in the @Component decorator, inside the index.html inside the selector.
 - So, basically the Index.html invokes the Main.ts, the Main.ts invokes the AppModule, the AppModule invokes the AppComponent, the AppComponent invokes the linked templateUrl html, once the html is loaded by the AppComponent it gets loaded inside the "selector" defined in Index.html
 
+- Selector also defines the thing where to load the html.
 
+polyfills.ts:
+- This is a framework which will be helpful to make our applications work with old Browsers. Where as helps new js to work with old browser.
+- So, let's say you want to explore the new syntaxes of ES6 but those old browsers cannot parse the newer versions.
+- this is where polyfills comes into picture.
+- polyfills are not coming from angular, they are coming from core-js which is a third-party.
+ 
+- Remember, Typescript, Node, polyfills these doesnt belong to angular.
 
+WebPack Going Live:
+- Going live, is not easy atleast in case of angular.
+- There are series of steps that needs to be performed:
+    1) We need to compile the Typescript files and convert them to JavaScript files.
+    2) Even the Components which we import from angular are also needed to be compiled to JavaScript and included as part of the build.
+    3) Bundling:   
+                - We know that AppComponent and AppModule use each other so rather than creating separate JS files we can create one big bundle.
+                - For Main.ts we are gonna create another Bundle.
+                - We would like to bundle things which are connected, because if we bundle them then we have to just make one call to the JavaScript file,
+                    or else from the browser we have to make multiple calls to multiple JavaScript files.
+                - So finally we need to do the bundling.
+    4) We need to take the CSS and html files and copy them into the bin / dist folder.
 
+So, all these nice things are done by an open source tool called as "webpack package management".
+    WebPack package management is a really nice open source framework which helps us to go and take our web applications bundle it and compress it and make it smaller in size
+        and put it into a final folder / dist folder / bin folder.
+
+- This all packaging / bundling happens when we actually do "ng build", this is provided by angular cli.
+- Whenever we do ng build / ng serve, all these bundling and packaging is done internally by webpack. So, internally angular cli does that.
