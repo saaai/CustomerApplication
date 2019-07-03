@@ -130,7 +130,7 @@ Module:
 - In this, @NgModule Decorator we have 2 Important properties for now we will concentrate on 2 Important properties.
     - declarations --> In this declarations we give all the Components which will be grouped in this AppModule.
         - If we have more than one Component that belongs to the same Module they can all be declared in this "declarations" property in the Module file.
-        - First, we need to import the component into Module and add it to the declarations.
+        - First, we need to import our custom written component into Module and add it to the declarations property.
         - We can declare the start up Component separately, in a property called "bootstrap".
         - So, in Module this "declarations" is used to define which Components will be grouped together in One Module.
         ex: @NgModule({
@@ -139,3 +139,54 @@ Module:
                     providers: [],
                     bootstrap: [AppComponent]  ----> this bootstrap says out of all the declarations Components which is the start up component.
         })
+
+- Also, we have to import { NgModule } from '@angular/core'; ----> without importing the Decorator @NgModule will not work.
+- In order to group the Components, we need to define them in the "declarations", and before declaring we need to import those Components.
+- We also, have something called as bootstrap property, where we define from the declared Custom Components which of the Component has to be Instantiated first(which is the start up Component).
+    - So, the Startup Component is declared in the bootstrap.
+    - And, also we need to import the @NgModule decorator, so we can start decorating.
+
+
+Import and Export :
+- we can see that we have an AppComponent and it is having "export class AppComponent". this AppComponent is consumed in the AppModule. Inorder to Consume any of the Components they need to be exported first and then imported where ever necessary.
+- The AppComponent can only be consumed in the AppModule only if there is a "export".
+- Remember that if we want import a class, we always need to export it first.
+
+- Now, we have View and Model. The Connection between the View and the Model are done by Components. The Components are grouped by Using Modules.
+- So, in declarations we define all the Components to be grouped into a Module. In bootstrap we define the start up Component.
+
+- Now, when we talk about complicated applications, they have a lot of Modules.
+    ex: we can have Stock Component, Purchase Component, Billing Component and everything gets grouped in to something called as "Inventory" Module.
+        - So, we have Inventory Module. Inside that we have 3 Components. Stock Component, Purchase Component, Billing Component.
+
+    ex: we can have Journal Component, Voucher Component and all these 2 Components can be grouped together into "Accounting Module".
+    
+    ex: you can have an About Us Component, Home Component, Index Component and all these 3 Components can be grouped together into "Home Module".
+        - So, you can have lot of Modules. But angular needs to know from all of these Modules. which one is the start up Module?
+            Ans: That is defined by a file called as "Main.ts"
+                - In this Main.ts we need to first import the Component and we need to say here please bootstrap this module first.
+                    "platformBrowserDynamic().bootstrapModule(AppComponent)"
+
+        - Main.ts defines which is the start up module of a project.
+
+- But now, someone has to go and invoke this Main.ts and this is done by "index.html"
+- So, first thing what happens is the user loads the application the index.html starts and the index.html goes and he calls the Main.ts
+    - The Main.ts then calls the AppModule by using the "platformBrowserDynamic".
+    - The AppModule then goes and loads the AppComponent, by using the bootstrap property in the @NgModule Decorator.
+    - Now, the AppComponent goes and loads the html becos the in the @Component Decorator the html file name is specified under the property "templateUrl".
+    - and Now, the bindings start working.
+
+- Now, if you see in the index.html there is a small element given in the body tag  called <app-root> </app-root>.
+    note: <app-root> </app-root> this can be named whatever name we want.
+
+- <app-root> </app-root> this is nothing but a "selector". Once, the html page has loaded, once this AppComponent has loaded this is that <app-root> </app-root> selector or section inside which the AppComponent linked html will run. 
+    - So, if you see the AppComponent.ts we have property called "selector" in the @Component decorator.
+        - So, in the "selector" we have defined that name as 
+            ex: selectpr: app-root ---> any name can be given "myapp-root", "yourapp-root".
+
+- This selector says that, load the templateUrl html specified in the @Component decorator, inside the index.html inside the selector.
+- So, basically the Index.html invokes the Main.ts, the Main.ts invokes the AppModule, the AppModule invokes the AppComponent, the AppComponent invokes the linked templateUrl html, once the html is loaded by the AppComponent it gets loaded inside the "selector" defined in Index.html
+
+
+
+
