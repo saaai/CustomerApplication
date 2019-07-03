@@ -123,5 +123,19 @@ Component:
 
 Module:
 - In our architecture we have said that we have an UI, Model, the UI and the Model is binded by a component. at this moment we dont have Model, later we will have Model.
-- We have the View, Model, Component, and group of Components are clubed or grouped into something called as Modules.
-- 
+- We have the View, Model, Component, and group of Components are clubed or grouped into something called as "Modules".
+- Everything is a class, if you create an Component its a class, if you create a Module it is a class, if you create a Model it is a Class.
+- if you see the Class there is a AppModule and on top of that there is a @NgModule.
+- Remember, For Module the Decorator is @NgModule. For Component the Decorator is @Component.
+- In this, @NgModule Decorator we have 2 Important properties for now we will concentrate on 2 Important properties.
+    - declarations --> In this declarations we give all the Components which will be grouped in this AppModule.
+        - If we have more than one Component that belongs to the same Module they can all be declared in this "declarations" property in the Module file.
+        - First, we need to import the component into Module and add it to the declarations.
+        - We can declare the start up Component separately, in a property called "bootstrap".
+        - So, in Module this "declarations" is used to define which Components will be grouped together in One Module.
+        ex: @NgModule({
+                    declarations: [AppComponent, AppComponent1, AppComponent2,......],
+                    imports: [BrowserModule],
+                    providers: [],
+                    bootstrap: [AppComponent]  ----> this bootstrap says out of all the declarations Components which is the start up component.
+        })
