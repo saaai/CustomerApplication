@@ -230,19 +230,22 @@ polyfills.ts:
 WebPack Going Live:
 - Going live, is not easy atleast in case of angular.
 - There are series of steps that needs to be performed:
-    1) We need to compile the Typescript files and convert the each individual ts files into JavaScript files. 
-    2) Even the Components which we import from angular are also needed to be compiled to JavaScript and included as part of the build.
-    3) Bundling:   
+    1) We need to compile all the Typescript files and convert the each individual ts files into JavaScript files.
+        -  Even the Components which we import from angular are also needed to be compiled to JavaScript and included as part of the build.
+    2) Bundling:   
                 - We know that AppComponent and AppModule use each other so rather than creating separate JS files we can create one big bundle.
-                - For Main.ts we are gonna create another Bundle.
+                - For Main.ts we are want create another Bundle.
                 - We would like to bundle things which are connected, because if we bundle them then we have to just make one call to the JavaScript file,
                     or else from the browser we have to make multiple calls to multiple JavaScript files.
                 - So finally we need to do the bundling.
-    4) We need to take the CSS and html files and copy them into the bin / dist folder.
+                - We need to take the CSS and html files and copy them into the bin / dist folder / final folder.
 
 So, all these nice things are done by an open source tool called as "webpack package management".
     WebPack package management is a really nice open source framework which helps us to go and take our web applications bundle it and compress it and make it smaller in size
         and put it into a final folder / dist folder / bin folder.
 
+Refer to the Screenshot: Screen Shot 2019-07-02 at 23.37.44.png in the project folder.
+
 - This all packaging / bundling happens when we actually do "ng build", this is provided by angular cli.
 - Whenever we do ng build / ng serve, all these bundling and packaging is done internally by webpack. So, internally angular cli does that.
+
