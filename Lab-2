@@ -1,0 +1,50 @@
+-----------------------------------Creating the Customer UI, Model and Component - Lab-2  -----------------------------
+
+Angular File Naming Convention:
+    - The file naming Convention which the Angular has followed is called as the Angular Style Guide.
+    - If you search for the Angular Style Guide you will come to the Angular.io page, where they have explained that what are the best practices to name a file in angular and cli team has exactly followed that.
+
+    -On, the top we have an App, it can be CustomerApp, InventoryApp, SupplierApp etc...
+    - In Angular we have different layers:
+        - we have Component Layer, Module Layer, Model Layer, UI Layer (html).
+
+    - Where the naming convention works here is, we have the "AppName.LayerName.ts" 
+                ex: CustomerApp.Module.ts 
+                    CustomerApp.Model.ts
+                    CustomerApp.Component.ts
+                    CustomerApp.Component.html
+                    CustomerApp.Component.css
+
+- This is just the standard specified by Angular Cli Team, we dont have to follow this.
+- Well, now let's go ahead and create a simple screen which will have a customer User Interface.
+
+- there are only 3-4 data types in java script 
+    String, Number, boolean, Object
+
+- Inorder to do the bindings, inorder to do the bindings we have to use something called as "directives".
+    Directives are nothing but these are syntaxes which are used in UI and they help us with communications to the Components, they help us to change the behaviour, the display, to manipulate the DOM elements easily.
+
+- So, the UI talks with the Component, so we use the ngModel = "CustomerModel.CustomerName" CustomerModel is defined in the CustomerApp.Component.ts and that is binded with the Customer object.
+
+- This ngModel is a directive which will help me do binding from the UI to the Component.
+    - Bindings are of two types :   
+        - we can send something from the ui to the Component.
+        - we want something from the Component to the ui.
+
+- Sometimes, we want one-way binding : we want to send data or events from the ui to the Component.
+- Sometimes, we want to take data from the Component to the UI.
+
+- Sometimes, we want to do both of them. 
+
+- So, if you want to send the data from the UI to the Object in the Component you write like this:
+    (ngModel)
+
+- So, if you want to get data from the object to the UI you write like this:
+    [ngModel]
+
+- So if you want two way binding : [(ngModel)]
+
+- Now, if you want to go and display data on the UI, like whatever that is there in the Cutomer Amount display it in the UI.
+    to do this we need to use something called as  "expressions".
+
+- 
