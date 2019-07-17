@@ -47,4 +47,24 @@ Angular File Naming Convention:
 - Now, if you want to go and display data on the UI, like whatever that is there in the Cutomer Amount display it in the UI.
     to do this we need to use something called as  "expressions".
 
-- 
+- click event means : something has to be sent from the UI to the Component so we use " ( ) " - it can be an event or it can be an data.
+
+- To view and iterate over the collection to display it in the table, we need to use the *ngFor loop.
+    Ex: *ngFor let cust of records
+        ----> cust is the local variable in html for object "records".
+
+Package Lock.json:
+
+- this File talks about how versioning works.
+- Whenever we see an software application, the version number of a software application is divided into 3 parts.
+    - 6 . 1 . 0
+    - Major Version . Minor Version . Revision
+
+- A software developer increases the Major Version Whenever there are breaking changes.
+    ex: 6 . 1 . 0 ------> 7 . 0 . 0
+
+- The Minor Version is increemented by a Software Developer whenever there are New features added or some extra things added and there are no breaking changes.
+    ex: 7 . 0 . 0 -------> 7 . 1 . 0
+
+- The Revision is increemented when there are Patches and BugFixes.
+    ex: 7 . 1 . 0 --------> 7 . 1 . 2
